@@ -93,36 +93,22 @@ public class Blackjack {
     public int obtenerValorDeCarta(String carta) {
         String valorCarta = carta.split(" ")[1];
 
-        switch (valorCarta) {
-            case "AS":
-                return 1;
-            case "DOS":
-                return 2;
-            case "TRES":
-                return 3;
-            case "CUATRO":
-                return 4;
-            case "CINCO":
-                return 5;
-            case "SEIS":
-                return 6;
-            case "SIETE":
-                return 7;
-            case "OCHO":
-                return 8;
-            case "NUEVE":
-                return 9;
-            case "DIEZ":
-                return 10;
-            case "JOTA":
-                return 10;
-            case "QUINA":
-                return 10;
-            case "KAISER":
-                return 10;
-            default:
-                return 0;
-        }
+        return switch (valorCarta) {
+            case "AS" -> 1;
+            case "DOS" -> 2;
+            case "TRES" -> 3;
+            case "CUATRO" -> 4;
+            case "CINCO" -> 5;
+            case "SEIS" -> 6;
+            case "SIETE" -> 7;
+            case "OCHO" -> 8;
+            case "NUEVE" -> 9;
+            case "DIEZ" -> 10;
+            case "JOTA" -> 10;
+            case "QUINA" -> 10;
+            case "KAISER" -> 10;
+            default -> 0;
+        };
     }
 
     public static void esBlackjack(){
